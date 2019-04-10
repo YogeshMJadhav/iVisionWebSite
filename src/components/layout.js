@@ -15,6 +15,7 @@ import Footer from "../components/footer";
 
 const Layout = ({ children }) => (
   <StaticQuery
+  
     query={graphql`
       query SiteTitleQuery {
         site {
@@ -39,7 +40,6 @@ const Layout = ({ children }) => (
           <main>{children}</main>
         <Footer/>
       </div>
-       
       </>
     )}
   />

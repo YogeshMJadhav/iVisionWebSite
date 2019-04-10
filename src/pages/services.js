@@ -1,18 +1,32 @@
 import React from "react"
 import { Link } from "gatsby"
 import Slide from 'react-reveal/Slide';
+import Layout from "../components/layout"
+import SEO from "../components/seo"
 
-class WhatWeDo extends React.Component {
+class Services extends React.Component{
     render() {
-        // const service = this.props.data.allContentfulServices;
-        
-        return (
-            <div className="whatWeSection pt-5">
-    <div className="container">
-        <h2 className="mb-4">What We Do</h2>
-        <div className="row">
-        {
-                      this.props.service.map((item) => {
+        const service = this.props.data.allContentfulServices.edges;
+        console.log(service);
+return(
+  <Layout>
+    <SEO title="Services" />
+    <div className="wrapper">
+    <div className="pagebanner">
+            <div className="pagebannerMax">
+                <h1 className="white">Services</h1>
+                {/* <!-- <h3 className="mb-4 white">The people who work at iVision Web Studio share the vision and values of our community.</h3>  --> */}
+                {/* <!-- <p className="white">The easiest way to get started is to use Ghost(Pro). If you prefer to self-host, we strongly recommend an Ubuntu server with at least 1GB of memory to run Ghost.</p> --> */}
+                
+            </div>
+        </div>
+
+<div className="whatWeSection pt-5">
+            <div className="container">
+                <h2 className="mb-4">What We Do</h2>
+                <div className="row">
+                    {
+                      service.map((item) => {
                           console.log();
                           return(
                             <Slide bottom>
@@ -34,16 +48,33 @@ class WhatWeDo extends React.Component {
                           )
                       })  
                     }
-        </div>
+                </div>
+            </div>
+
+           
+        </div>       
     </div>
-
-   <div className="text-center">
-        <Link to='/services/'> <button className="btn mb-5">View all</button> </Link>
-   </div> 
-</div>
-   
+  </Layout>
 )
-    }
 }
+} 
+export default Services;
 
-export default WhatWeDo;
+export const pageQuery = graphql`
+  query Services {
+    allContentfulServices{
+      edges{
+        node{
+          icon{
+            file{
+              url
+            }
+          }
+          title
+          tool
+          tagline
+          slug
+        }
+      }
+    }
+  }`

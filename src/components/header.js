@@ -9,6 +9,8 @@ class Header extends React.Component {
        this.setState({visible:!this.state.visible})
     }
     render() {
+       
+        
         return(
             <header>
                       <div className="top-line">
