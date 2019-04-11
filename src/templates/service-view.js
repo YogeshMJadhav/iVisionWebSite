@@ -81,7 +81,8 @@ return  (
                     </div>    
                 </div>
                 <div className="row">
-                    {post.content && <div className="col-12">
+                    {post.content && 
+                    <div className="col-12">
                         <p
                         dangerouslySetInnerHTML={{
                             __html: post.content.childMarkdownRemark.html,
@@ -107,23 +108,21 @@ return  (
                          )
                      })
                    }
-
-                    {/* {
+{/* 
+                    {
                       post.cardPost.images && 
                       post.cardPost.map((item,index) => {
                           log(item)
                           return (
-                             <div className="col-md-6 mt-3">
-                        <div className="h-100 p-3 layout-border br10" >
-                            <img src={item.images[index].file.url} alt="Opencart" title="Opencart" width="40" className="mr-1" />
-                            <h5> {item.title}</h5>          
-                            <p
-                        dangerouslySetInnerHTML={{
-                            __html: item.content.childMarkdownRemark.html,
-                        }}
-                        />
-                        </div>    
-                       </div> 
+                            <div className="col-md-6 mt-3">
+                            <div className="h-100 p-3 layout-border br10" >
+                                <img src="images/tools/wordpress2.png" alt="Opencart" title="Opencart" width="40" className="mr-1" />
+                                <h5> CMS ( content management system )  </h5>          
+                                <p >
+                                    A content management system is a software application or set of related programs that are used to create and manage digital content.
+                                </p>
+                            </div>    
+                        </div>
                           )
                       })
                     } */}
