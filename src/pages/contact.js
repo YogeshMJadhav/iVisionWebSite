@@ -9,7 +9,7 @@ const Contact = () => (
 <Layout>
   <SEO title="Contact" />
   <Fade>
-    {/* <div className="wrapper">
+    <div className="wrapper">
         <div className="pagebanner">
         <div className="pagebannerMax">
             <h1 className="white">Contact Us</h1>
@@ -79,16 +79,7 @@ const Contact = () => (
 
         </div>        
 
-    </div> */}
-    <form 
-            name="contact"
-            method="post"
-            data-netlify="true"
-            data-netlify-honeypot="bot-field"
-        >
-        <input name="name" type="text" />
-        <button>okk</button>
-        </form>
+    </div>
   </Fade>
 </Layout>
 )
