@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Fade from 'react-reveal/Fade';
@@ -32,7 +32,10 @@ class About extends React.Component {
                                             }}
                                         />
                                         <div className="row mt-4">
-                                              <div className="col-md-5 mb-3"> <img src={about.image.file.url} className="img-responsive img-fluid" /></div>
+                                              <div className="col-md-5 mb-3">
+                                              <Img className="img-responsive img-fluid" alt={about.title} sizes={about.image.sizes} />
+                                               {/* <img src={about.image.file.url} className="img-responsive img-fluid" /> */}
+                                               </div>
                                               <div className="col-md-7">
                                                     <div
                                                        dangerouslySetInnerHTML={{
@@ -79,8 +82,8 @@ query About {
         title
         tagline
         image{
-          file{
-            url
+          sizes(maxWidth: 1180, background: "rgb:000000") {
+            ...GatsbyContentfulSizes_withWebp
           }
         }
         asACompany{

@@ -41,9 +41,12 @@ export const pageQuery = graphql`
       edges{
         node{
           icon{
-            file{
-              url
-            }
+            fixed(width: 50 ,height:50) {
+            width
+            height
+            src
+            srcSet
+          }
           }
           title
           tool

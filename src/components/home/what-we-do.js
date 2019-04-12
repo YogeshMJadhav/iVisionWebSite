@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import Slide from 'react-reveal/Slide';
+import Img from "gatsby-image"
 
 class WhatWeDo extends React.Component {
     render() {
@@ -13,14 +14,15 @@ class WhatWeDo extends React.Component {
         <div className="row">
         {
                       this.props.service.map((item) => {
-                          console.log();
+                        //   console.log(item.node.icon.file.childImageSharp.fixed);
                           return(
                             <Slide bottom>
                                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
                                     <div className="card border-0 h-100">   
                                         <div className="card-body">
                                             <div className="mb-3">
-                                                <img src={item.node.icon && item.node.icon.file.url} title="Jam Developer" alt="Jam Developer" height="50px"/>
+                                              <Img fixed={item.node.icon.fixed} alt={item.node.icon.title} />
+                                                {/* <img src={item.node.icon && item.node.icon.file.url} title="Jam Developer" alt="Jam Developer" height="50px"/> */}
                                             </div>
                                             <h5 className="card-title">{item.node.title}</h5>
                                             <p className="small">{item.node.tool}</p>

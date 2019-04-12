@@ -1,6 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
-
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Fade from 'react-reveal/Fade';
@@ -34,7 +34,8 @@ class Team extends React.Component{
                                             <div className="card border-0 text-center py-3">   
                                                 <div className="card-body">
                                                     <div className="mb-3">
-                                                        <img src={item.file.url} title={item.title} alt={item.title} width="120" className="rounded-circle"/>
+                                                    <Img className="rounded-circle" alt={item.title} sizes={item.sizes} width="120"/>
+                                                        {/* <img src={item.file.url} title={item.title} alt={item.title} width="120" className="rounded-circle"/> */}
                                                     </div>
                                                     <h5 className="">{item.title}</h5>
                                                     <p className="card-text text-blue "> {item.description} </p>                               
@@ -67,9 +68,9 @@ query Team {
          slug
          tagline
          teamAvatar{
-           file{
-             url 
-           }
+            sizes(maxWidth: 1180, background: "rgb:000000") {
+                ...GatsbyContentfulSizes_withWebp
+              }
            title
            description
          }

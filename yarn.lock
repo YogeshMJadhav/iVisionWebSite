@@ -725,6 +725,10 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
+"@merchantlabs/gatsby-image-loader@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@merchantlabs/gatsby-image-loader/-/gatsby-image-loader-0.1.2.tgz#7bddeb19d9e0d83b0ce8d58c673ac107475e5075"
+
 "@mikaelkristiansson/domready@^1.0.9":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@mikaelkristiansson/domready/-/domready-1.0.9.tgz#b2b85d8ac7bb2797e577050b61aeaf1b26fbd906"

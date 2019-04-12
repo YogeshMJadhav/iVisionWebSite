@@ -49,9 +49,9 @@ render() {
                                               </p>
                                               <div>
                                                   <strong> Job Description: </strong>
-                                                  <div
+                                                  <div className="bullet"
                                                        dangerouslySetInnerHTML={{
-                                                       __html: item.description.childMarkdownRemark.html,
+                                                       __html: item.description.childContentfulRichText.html,
                                                          }}
                                                           />                          
                                                </div>
@@ -92,7 +92,7 @@ query Carrer {
           experience
           skillsRequired
           description{
-            childMarkdownRemark{
+            childContentfulRichText{
               html
             }
           }
