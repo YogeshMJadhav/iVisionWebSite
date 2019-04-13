@@ -225,6 +225,11 @@ body{
         border-radius: .8rem;
         overflow: hidden;
       }
+
+      .FeaturedImg .gatsby-image-wrapper div:nth-of-type(1){
+        padding-bottom:72.3333% !important;
+    }
+    
     /*   
       .FeaturedProjects  .image{
         display: block;

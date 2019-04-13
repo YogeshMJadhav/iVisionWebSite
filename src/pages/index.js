@@ -33,8 +33,6 @@ class IndexPage extends React.Component{
 
 export default IndexPage;
 
-
-
 export const pageQuery = graphql`
   query Service {
     allContentfulServices{
@@ -42,11 +40,15 @@ export const pageQuery = graphql`
         node{
           icon{
             fixed(width: 50 ,height:50) {
-            width
-            height
-            src
-            srcSet
-          }
+              width
+              height
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
+            }
+            description
+            title
           }
           title
           tool
@@ -78,9 +80,13 @@ export const pageQuery = graphql`
         instagram
         linkedin
         ivisionLogo{
-          file
-          {
-            url
+          fixed(width: 200 ,height:50) {
+            width
+            height
+            src
+            srcSet
+            srcWebp
+            srcSetWebp
           }
         }
       }
