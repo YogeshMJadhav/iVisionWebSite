@@ -1,7 +1,7 @@
 import React from "react"
-import { Link } from "gatsby"
+// import { Link } from "gatsby"
 import Fade from 'react-reveal/Fade';
-
+import Img from "gatsby-image"
 class  FeaturedProjects extends React.Component{
     render() {
         
@@ -13,17 +13,18 @@ return (
         {
             this.props.portfolio.map((item) => {
                 return(
-                    <Fade >
+                    // <Fade >
                     <div className="col-md-6 col-lg-4 col-sm-6 mb-5">
                         <div className="FeaturedImg">
-                            <img src={item.node.projectImage && item.node.projectImage.file.url} alt="Image2" className="img-fluid"/> 
+                        <Img className=" img-fluid"  sizes={item.node.projectImage && item.node.projectImage.sizes} />
+                            {/* <img src={item.node.projectImage && item.node.projectImage.file.url} alt="Image2" className="img-fluid"/>  */}
                             <div className="overlay">
                               <div className="content text"><a href={item.node.projectLink} target="_blank"><button className ="FeaturedBtn"> Visit Website</button></a> </div>
                              </div>
                           
                         </div>
                      </div>
-                  </Fade> 
+                //   </Fade> 
                 )
             })
         }

@@ -62,8 +62,8 @@ export const pageQuery = graphql`
           slug
           projectLink
           projectImage{
-            file{
-              url
+            sizes(maxWidth: 1180, background: "rgb:000000") {
+              ...GatsbyContentfulSizes_withWebp
             }
           }
         }

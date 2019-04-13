@@ -1,6 +1,8 @@
 import { Link } from "gatsby"
 import React from "react"
 import PropTypes from "prop-types"
+import Img from "gatsby-image"
+
 class Header extends React.Component {
     state={
         visible:false
@@ -33,7 +35,8 @@ class Header extends React.Component {
                       <div className="container">
                           <nav className="navbar navbar-expand-lg navbar-light pl-0 pr-0">
                           <Link to="/" className="navbar-brand" href="#">
-                          <img src={companyOverview.ivisionLogo.file.url} />
+                          <Img  alt={companyOverview.ivisionLogo.title} fixed={companyOverview.ivisionLogo.fixed} />
+                          {/* <img src={companyOverview.ivisionLogo.file.url} /> */}
                           </Link>
                               <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded={this.state.visible} aria-label="Toggle navigation"
                               onClick={this.handleToggle}>

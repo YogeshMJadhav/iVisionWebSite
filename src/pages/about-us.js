@@ -8,8 +8,6 @@ import Fade from 'react-reveal/Fade';
 class About extends React.Component {
     render() {
         const about=this.props.data.contentfulAboutUs;
-        console.log(about);
-        
         return (
             <Layout>
               <SEO title="About Us" keywords={[`gatsby`, `application`, `react`]} />

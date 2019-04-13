@@ -32,9 +32,13 @@ const Layout = ({ children }) => (
           instagram
           linkedin
           ivisionLogo{
-            file
-            {
-              url
+              fixed(width: 200 ,height:50) {
+              width
+              height
+              src
+              srcSet
+              srcWebp
+              srcSetWebp
             }
           }
         }
