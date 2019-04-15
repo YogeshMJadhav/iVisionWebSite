@@ -4,6 +4,9 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Fade from 'react-reveal/Fade';
 import Img from "gatsby-image"
+import { graphql } from "gatsby"
+
+
 class WebApp extends React.Component {
     render() {
         const post = this.props.data.contentfulServices;
@@ -70,7 +73,7 @@ return  (
 
 
              {/* paragraphHeading 1 for jam */}
-            { post.slug=="jam-development" && post.paragraphHeading &&
+            { post.slug==="jam-development" && post.paragraphHeading &&
               <div className="mt-4"> 
               <div className="row">
                   <div className="col-12">
@@ -79,10 +82,10 @@ return  (
               </div>
               <div className="row">
               {
-                post.cardPost.map((item) => {
-                 if(item.categories=="what") {
+                post.cardPost.map((item,index) => {
+                 if(item.categories==="what") {
                    return(
-                    <div className="col-md-4  mt-3">
+                    <div className="col-md-4  mt-3" key={index}>
                       <div className="h-100   layout-border p-3 br10 ">
                           <h5> {item.title} </h5>          
                           <p
@@ -101,7 +104,7 @@ return  (
               </div>
             }
             {/* paragraphHeading2 for jam */}
-              { post.slug=="jam-development" && post.paragraphHeading2 &&
+              { post.slug==="jam-development" && post.paragraphHeading2 &&
               <div className="mt-4"> 
               <div className="row">
                   <div className="col-12">
@@ -111,7 +114,7 @@ return  (
               <div className="row">
               {
                 post.cardPost.map((item) => {
-                 if(item.categories=="why") {
+                 if(item.categories==="why") {
                    return(
                     <div className="col-md-6  mt-3">
                       <div className="h-100   layout-border p-3 br10 ">

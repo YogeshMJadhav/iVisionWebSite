@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -29,7 +29,7 @@ class About extends React.Component {
                                         __html: about.aboutInfo.childContentfulRichText.html,
                                             }}
                                         />
-                                        <div className="row mt-4">
+                                        <div className="row mt-4 about-img-list">
                                               <div className="col-md-5 mb-3">
                                               <Img className="img-responsive img-fluid" alt={about.title} sizes={about.image.sizes} />
                                                {/* <img src={about.image.file.url} className="img-responsive img-fluid" /> */}
@@ -44,7 +44,7 @@ class About extends React.Component {
                                           </div> 
           
           
-                                        <div className="row">
+                                        <div className="row mt-2">
                                               <div className="col-md-6">
                                                    <div
                                                        dangerouslySetInnerHTML={{
@@ -52,7 +52,7 @@ class About extends React.Component {
                                                        }}
                                                      />
                                               </div>
-                                               <div className="col-md-6 bg-whitec">
+                                               <div className="col-md-6 bg-whitec py-2">
                                                    <div
                                                        dangerouslySetInnerHTML={{
                                                        __html: about.ourStrategies.childContentfulRichText.html,

@@ -1,7 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from 'gatsby'
 import Layout from "../components/layout"
-import Image from "../components/image"
 import SEO from "../components/seo"
 import SlickSlider from '../components/home/slick-slider';
 import WhatWeDo from '../components/home/what-we-do';
@@ -11,17 +10,19 @@ import Fade from 'react-reveal/Fade';
 
 class IndexPage extends React.Component{
   render() {
-    const service = this.props.data.allContentfulServices.edges;
+    const service = this.props.data.allContentfulAllServices.edges;
     const portfolio = this.props.data.allContentfulPortfolio.edges;
+    console.log(service);
+    
  return (
   <div>
   <Layout >
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Fade>
     <div className="slick-wrapper">
-    <SlickSlider/>
+    <SlickSlider service={service[0].node.services}/>
     </div>
-    <WhatWeDo service={service}/>
+    <WhatWeDo service={service[0].node.services}/>
     <FeaturedProjects portfolio={portfolio} />
     <WhatOurCustomerSay/>
     </Fade>
@@ -35,25 +36,33 @@ export default IndexPage;
 
 export const pageQuery = graphql`
   query Service {
-    allContentfulServices{
+    allContentfulAllServices{
       edges{
         node{
-          icon{
-            fixed(width: 50 ,height:50) {
-              width
-              height
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
+          services{
+            icon{
+              fixed(width: 50 ,height:50) {
+                width
+                height
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+              }
+              description
+              title
             }
-            description
             title
+            tool
+            tagline
+            slug
+            slideTitle
+            shortBio{
+              childMarkdownRemark{
+                excerpt
+              }
+            }
           }
-          title
-          tool
-          tagline
-          slug
         }
       }
     }

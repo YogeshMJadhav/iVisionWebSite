@@ -18,11 +18,11 @@ const Footer = ({companyOverview}) => (
                    </div>
 
                    <div className="mainEmailSocial d-flex">
-                       <div className="email"><i className="fas fa-envelope mr-1"></i><Link href={`mailto:${companyOverview.mailId1}`} className="black mr-3">{companyOverview.mailId1}</Link></div>
+                       <div className="email"><i className="fas fa-envelope mr-1"></i><a href={`mailto:${companyOverview.mailId1}`} className="black mr-3">{companyOverview.mailId1}</a></div>
                        <div className="social d-flex">
-                           <Link to={companyOverview.facebook} target="_blank" className="socialIcon mr-2"><i className="fab fa-facebook-f black font-14"></i></Link>
-                           <Link to={companyOverview.instagram} className="socialIcon mr-2" target="_blank"><i className="fab fa-instagram black font-14"></i></Link>
-                           <Link to={companyOverview.linkedin} className="socialIcon mr-2" target="_blank"><i className="fab fa-linkedin-in black font-14"></i></Link>
+                           <a href={companyOverview.facebook} target="_blank" className="socialIcon mr-2"><i className="fab fa-facebook-f black font-14"></i></a>
+                           <a href={companyOverview.instagram} className="socialIcon mr-2" target="_blank"><i className="fab fa-instagram black font-14"></i></a>
+                           <a href={companyOverview.linkedin} className="socialIcon mr-2" target="_blank"><i className="fab fa-linkedin-in black font-14"></i></a>
                        </div>
                    </div>
 

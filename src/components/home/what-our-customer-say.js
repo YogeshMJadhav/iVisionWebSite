@@ -1,14 +1,13 @@
 import React from "react"
-import { Link } from "gatsby"
 
-import Slider from "react-slick";
-var settings = {
-    dots: true,
-    infinite: true,
-    autoplay:true,
-    slidesToShow: 1,
-    slidesToScroll: 1
-  };
+// import Slider from "react-slick";
+// var settings = {
+//     dots: true,
+//     infinite: true,
+//     autoplay:true,
+//     slidesToShow: 1,
+//     slidesToScroll: 1
+//   };
 
 const WhatOurCustomerSay = () => (
     <div className="Testimonial pt-5 pb-5">

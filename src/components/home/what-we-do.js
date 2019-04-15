@@ -21,14 +21,14 @@ class WhatWeDo extends React.Component {
                                     <div className="card border-0 h-100">   
                                         <div className="card-body">
                                             <div className="mb-3">
-                                              <Img fixed={item.node.icon.fixed} alt={item.node.icon.title} />
+                                              <Img fixed={item.icon.fixed} alt={item.icon.title} />
                                                 {/* <img src={item.node.icon && item.node.icon.file.url} title="Jam Developer" alt="Jam Developer" height="50px"/> */}
                                             </div>
-                                            <h5 className="card-title">{item.node.title}</h5>
-                                            <p className="small">{item.node.tool}</p>
-                                            <p className="card-text">{item.node.tagline}</p>
+                                            <h5 className="card-title">{item.title}</h5>
+                                            <p className="small">{item.tool}</p>
+                                            <p className="card-text">{item.tagline}</p>
                                             <p className="card-text"><small className="text-muted">
-                                            <Link to={`/${item.node.slug}`}>Read more <i className="fas fa-chevron-right ml-1" ></i></Link></small></p>
+                                            <Link to={`/${item.slug}`}>Read more <i className="fas fa-chevron-right ml-1" ></i></Link></small></p>
                                         </div>
                                     </div>
                                 </div>
