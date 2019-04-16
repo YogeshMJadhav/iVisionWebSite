@@ -380,8 +380,8 @@ body{
     main{ overflow: hidden;}
     .slick-current{ z-index: 999999;}
 
-    .react-reveal .slick-prev{ left:25px ; z-index: 9; font-size: 25px; cursor: pointer;  }
-    .react-reveal .slick-next{ right:40px ; z-index: 9; font-size: 25px;  cursor: pointer; }
+    .react-reveal .slick-prev{ left:25px ; z-index: 9; font-size: 25px; cursor: pointer; list-style: none; }
+    .react-reveal .slick-next{ right:40px ; z-index: 9; font-size: 25px;  cursor: pointer;  }
 
     .react-reveal .slick-next:before, .react-reveal .slick-prev:before{ font-size: 35px;}
     .react-reveal .slick-dots{ bottom:25px;}
@@ -389,7 +389,9 @@ body{
     
     .Testimonial{ height: 10px; padding:0 !important;  }
 
-    
+    .react-reveal a:hover{
+        text-decoration:none;
+    }
 
 
     
@@ -445,6 +447,6 @@ box-shadow: 0 0 1px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.03);
         text-align: center;
     }
     .success{
-        font-size: 113px;
+        font-size: 70px;
         color: white;
     }

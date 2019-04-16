@@ -31,7 +31,8 @@ return(
                           console.log(item);
                           return(
                             <Slide bottom>
-                                <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
+                            <Link to={`/${item.slug}`} > 
                                     <div className="card border-0 h-100">   
                                         <div className="card-body">
                                             <div className="mb-3">
@@ -41,10 +42,15 @@ return(
                                             <p className="small">{item.tool}</p>
                                             <p className="card-text">{item.tagline}</p>
                                             <p className="card-text"><small className="text-muted">
-                                            <Link to={`/${item.slug}`}>Read more <i className="fas fa-chevron-right ml-1" ></i></Link></small></p>
+                                            <Link to={`/${item.slug}`}>Read more <i className="fas fa-chevron-right ml-1" ></i></Link>
+                                            </small></p>
                                         </div>
                                     </div>
+                                    </Link>
                                 </div>
+                            
+                            
+                            
                             </Slide>
                           )
                       })  

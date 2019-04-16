@@ -18,6 +18,7 @@ class WhatWeDo extends React.Component {
                           return(
                             <Slide bottom>
                                 <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
+                             <Link to={`/${item.slug}`} > 
                                     <div className="card border-0 h-100">   
                                         <div className="card-body">
                                             <div className="mb-3">
@@ -31,6 +32,7 @@ class WhatWeDo extends React.Component {
                                             <Link to={`/${item.slug}`}>Read more <i className="fas fa-chevron-right ml-1" ></i></Link></small></p>
                                         </div>
                                     </div>
+                                    </Link>
                                 </div>
                             </Slide>
                           )
