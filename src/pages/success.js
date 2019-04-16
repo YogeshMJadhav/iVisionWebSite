@@ -1,33 +1,28 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
-import Img from 'gatsby-image'
-import { graphql } from 'gatsby';
 
 class Success extends React.Component {
     render(){
-        const success=this.props.data.contentfulContactUs;
-        console.log(success);
-        
         return(
             <Layout>
                 <Helmet>
                     <title>Success Page</title>
                     <meta name="description" content="Success Page" />
                 </Helmet>
-
-                <div id="main" className="alt">
-                    <section id="one">
-                        <div className="inner">
-                            <header className="major">
-                            </header>
-                            <span className="image main">
-                            <Img className="thank-you" alt={success.title} sizes={success.thankyou.sizes} />
-                            {/* <img src={pic11} alt="" /> */}
-                            </span> 
-                            <p>Thank you for contacting us!</p>
+                <div>
+                    <div className="pagebanner">
+                        <div className="pagebannerMax">
+                            <div className="success">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                                <h1 className="white">Successfully Submited</h1>
                         </div>
-                    </section>
+                    </div>
+                    <div className="bg-white shadow-1 brb4 p-5 message ">
+                        <h4> Your message has been successfully sent.</h4>
+                        <h4> We will contact you very soon.</h4>
+                    </div>
                 </div>
             </Layout>
         )
@@ -35,16 +30,3 @@ class Success extends React.Component {
 }    
 
 export default Success;
-
-export const pageQuery = graphql`
-query Success {
-    contentfulContactUs{
-        thankyou{
-            sizes(maxWidth: 1180, background: "rgb:000000") {
-              ...GatsbyContentfulSizes_withWebp
-            }
-            title
-          }
-      }  
-}
-`

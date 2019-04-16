@@ -419,12 +419,15 @@ box-shadow: 0 0 1px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.03);
      .bullet ul li{
          list-style:none;
      }
+
      .bullet ul li p::before{
         content:'✓';
         font-weight:bolder;
         color:#000;
         font-size: 17px;
         margin-right:8px;
+        position: absolute;
+        left:0px;
     }
 
     .about-img-list ul{ margin-left:20px; }
@@ -432,4 +435,16 @@ box-shadow: 0 0 1px rgba(0,0,0,.06), 0 2px 6px rgba(0,0,0,.03);
     .image-main{
         height: 100;
         width: 100;
+    }
+    .m{
+        width: 150px;
+        margin: auto;
+
+    }
+    .message{
+        text-align: center;
+    }
+    .success{
+        font-size: 113px;
+        color: white;
     }

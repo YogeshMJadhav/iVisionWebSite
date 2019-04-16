@@ -33,7 +33,7 @@ class Team extends React.Component{
                                         <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-5">
                                             <div className="card border-0 text-center py-3">   
                                                 <div className="card-body">
-                                                    <div className="mb-3">
+                                                    <div className="mb-3 m">
                                                     <Img className="rounded-circle" alt={item.title} sizes={item.sizes} width="120"/>
                                                         {/* <img src={item.file.url} title={item.title} alt={item.title} width="120" className="rounded-circle"/> */}
                                                     </div>
