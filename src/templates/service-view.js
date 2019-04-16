@@ -81,9 +81,8 @@ return  (
                   </div>    
               </div>
               <div className="row">
-              {
-                post.cardPost.map((item,index) => {
-                 if(item.categories==="what") {
+              {post.cardPost.filter(data => data.categories==="what")
+                .map((item,index) => {
                    return(
                     <div className="col-md-4  mt-3" key={index}>
                       <div className="h-100   layout-border p-3 br10 ">
@@ -96,7 +95,6 @@ return  (
                       </div>    
                   </div>
                   )
-                 }
                 })
               }
                    
@@ -112,9 +110,8 @@ return  (
                   </div>    
               </div>
               <div className="row">
-              {
-                post.cardPost.map((item) => {
-                 if(item.categories==="why") {
+              {post.cardPost.filter(data => data.categories==="why")
+               .map((item) => {
                    return(
                     <div className="col-md-6  mt-3">
                       <div className="h-100   layout-border p-3 br10 ">
@@ -127,7 +124,6 @@ return  (
                       </div>    
                   </div>
                   )
-                 }
                 })
               }
                   

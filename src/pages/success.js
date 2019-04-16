@@ -2,8 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import Img from 'gatsby-image'
-// import pic11 from '..//pic11.jpg'
-// import { graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 class Success extends React.Component {
     render(){

@@ -23,9 +23,9 @@ class Header extends React.Component {
                                   <span> <i className="fas fa-envelope font-12 mr-1"></i><a href="mailto:contact@ivisionstudio.in" className="black">{companyOverview.mailId1}</a> </span>
                               </div>  
                               <div className="col-lg-2 col-md-2 font-14 d-flex justify-content-end">
-                                  <span className="mr-2"> <a href={companyOverview.facebook} target="_blank" className="socialIcon"><i className="fab fa-facebook-f black font-14"></i></a></span>
-                                  <span className="mr-2"> <a href={companyOverview.instagram} className="socialIcon" target="_blank"><i className="fab fa-instagram black font-14"></i></a></span>
-                                  <span className="mr-2"> <a href={companyOverview.linkedin} className="socialIcon" target="_blank"><i className="fab fa-linkedin-in black font-14"></i></a></span>
+                                  <span className="mr-2"> <a href={companyOverview.facebook} target="_blank" className="socialIcon" rel="noopener noreferrer"><i className="fab fa-facebook-f black font-14"></i></a></span>
+                                  <span className="mr-2"> <a href={companyOverview.instagram} className="socialIcon" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram black font-14"></i></a></span>
+                                  <span className="mr-2"> <a href={companyOverview.linkedin} className="socialIcon" target="_blank" rel="noopener noreferrer"><i className="fab fa-linkedin-in black font-14"></i></a></span>
                               </div>
                           </div>
                       </div>

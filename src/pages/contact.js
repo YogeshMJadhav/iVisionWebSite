@@ -3,17 +3,17 @@ import { navigate } from "gatsby-link";
 import Layout from '../components/layout'
 import Fade from 'react-reveal/Fade';
 import SEO from "../components/seo"
-
+import { graphql } from 'gatsby'
 const encode = data => {
   return Object.keys(data)
     .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
     .join("&");
 };
 
-const count = str => {
-  const length = str.split(",").length;
-  return length;
-};
+// const count = str => {
+//   const length = str.split(",").length;
+//   return length;
+// };
 
 class Contact extends React.Component {
   state = {
@@ -127,7 +127,7 @@ class Contact extends React.Component {
                                               <p className="mb-0 font-weight-bold">Address</p>
                                               <p className="mb-4">{contact.address}</p>
                                           </div>
-                                          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7567.054327732735!2d73.822386!3d18.505065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e13c52b68392e92!2sivision+studio!5e0!3m2!1sen!2sin!4v1553501385197" frameBorder="0" width="100%" height="350" allowFullScreen="allowfullscreen"></iframe>        
+                                          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7567.054327732735!2d73.822386!3d18.505065!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2e13c52b68392e92!2sivision+studio!5e0!3m2!1sen!2sin!4v1553501385197" frameBorder="0" width="100%" height="350" allowFullScreen="allowfullscreen" title ="location"></iframe>        
                                       </div>
                                   </div>
                               </div>

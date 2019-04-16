@@ -16,10 +16,9 @@ var settings = {
   const slide=['slide-one','slide-two','slide-three']
 const SlickSlider = (props) => (
     <Slider {...settings}   >
-        {
-                props.service.map((item,index) => {
-                    if(item.slideTitle) {
-                        return (
+        {  props.service.filter(data => data.slideTitle)
+                .map((item,index) => {
+                      return (
                         <div className={`slider ${slide[index]}`}>
                         <div className="sliderMax">
                             <h1 className="white">{item.slideTitle}</h1>
@@ -33,7 +32,6 @@ const SlickSlider = (props) => (
                         </div>
                     </div>
                     )
-                    }
                 })
             }  
     </Slider>
