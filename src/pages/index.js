@@ -11,7 +11,7 @@ import Fade from 'react-reveal/Fade';
 class IndexPage extends React.Component{
   render() {
     const service = this.props.data.allContentfulAllServices.edges;
-    const portfolio = this.props.data.allContentfulPortfolio.edges;
+    const portfolio = this.props.data.allContentfulAllPortfolio.edges;
     return (
         <div>
           <Layout >
@@ -19,7 +19,7 @@ class IndexPage extends React.Component{
               <Fade>
                   <SlickSlider service={service[0].node.services}/>
                   <WhatWeDo service={service[0].node.services} tagline={service[0].node.tagline}/>
-                  <FeaturedProjects portfolio={portfolio} />
+                  <FeaturedProjects portfolio={portfolio[0].node.portfolio} tagline={portfolio[0].node.tagline}/>
                   <WhatOurCustomerSay/>
               </Fade>
           </Layout>
@@ -63,15 +63,18 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPortfolio{
+    allContentfulAllPortfolio{
       edges{
         node{
-          title
-          slug
-          projectLink
-          projectImage{
-            sizes(maxWidth: 1180, background: "rgb:000000") {
-              ...GatsbyContentfulSizes_withWebp
+          tagline
+          portfolio{
+            title
+            slug
+            projectLink
+            projectImage{
+              sizes(maxWidth: 1180, background: "rgb:000000") {
+                ...GatsbyContentfulSizes_withWebp
+              }
             }
           }
         }

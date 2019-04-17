@@ -15,7 +15,7 @@ class WhatWeDo extends React.Component {
                                 return(
                                     <Slide bottom key={index}>
                                         <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
-                                            <Link to={`/${item.slug}`} > 
+                                            <Link to={`/services/${item.slug}`} > 
                                                 <div className="card border-0 h-100">   
                                                     <div className="card-body">
                                                         <div className="mb-3">
