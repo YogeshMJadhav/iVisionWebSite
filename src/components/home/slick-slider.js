@@ -19,8 +19,8 @@ var settings = {
             {  props.service.filter(data => data.slideTitle)
                     .map((item,index) => {
                         return (
-                            <div className="slick-wrapper">
-                                <div className={`slider ${slide[index]}`} key={index}>
+                            <div className="slick-wrapper" key={index}>
+                                <div className={`slider ${slide[index]}`}>
                                     <div className="sliderMax">
                                         <h1 className="white">{item.slideTitle}</h1>
                                         <h3 className="mb-4 white">{item.tagline}</h3>

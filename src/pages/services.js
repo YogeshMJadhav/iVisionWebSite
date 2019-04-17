@@ -8,7 +8,6 @@ import { graphql } from 'gatsby'
 class Services extends React.Component{
     render() {
         const service = this.props.data.allContentfulAllServices.edges;
-        console.log(service)
 return(
   <Layout>
       <SEO title="Services" />
@@ -37,7 +36,7 @@ return(
                                                       <p className="small">{item.tool}</p>
                                                       <p className="card-text">{item.tagline}</p>
                                                       <p className="card-text"><small className="text-muted">
-                                                      <Link to={`/${item.slug}`}>Read more <i className="fas fa-chevron-right ml-1" ></i></Link>
+                                                      <br/>
                                                       </small></p>
                                                   </div>
                                               </div>

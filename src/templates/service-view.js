@@ -20,9 +20,9 @@ class WebApp extends React.Component {
                             <h3 className="white mb-3">{post.tagline}</h3> 
                             <div className="banner-icons" >
                                 {post.icons &&
-                                    post.icons.map((item) => {
+                                    post.icons.map((item,index) => {
                                         return(
-                                        <Img fixed={item.fixed} alt={item.title} width="40" className="mr-1"/>
+                                        <Img fixed={item.fixed} alt={item.title} width="40" className="mr-1" key={index}/>
                                         )
                                     })
                                 }
@@ -31,12 +31,12 @@ class WebApp extends React.Component {
                     </div>
                     <div className="whatWeSection pb-5">
                         <div className="container container-less">
-                            <div class="row mt-3">
+                            <div className="row mt-3">
                                 <div className="col-12">
                                     <nav aria-label="breadcrumb ">
-                                    <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><Link to="/services/">Services</Link></li>
-                                        <li class="breadcrumb-item active" aria-current="page">{post.title} </li>
+                                    <ol className="breadcrumb">
+                                        <li className="breadcrumb-item"><Link to="/services/">Services</Link></li>
+                                        <li className="breadcrumb-item active" aria-current="page">{post.title} </li>
                                     </ol>
                                     </nav>
                                 </div>
@@ -99,9 +99,9 @@ class WebApp extends React.Component {
                                                 </div>
                                                 <div className="row">
                                                     { post.cardPost.filter(data => data.categories==="why")
-                                                        .map((item) => {
+                                                        .map((item,index) => {
                                                             return(
-                                                            <div className="col-md-6  mt-3">
+                                                            <div className="col-md-6  mt-3" key={index}>
                                                                 <div className="h-100   layout-border p-3 br10 ">
                                                                     <h5> {item.title} </h5>          
                                                                     <p
@@ -136,10 +136,10 @@ class WebApp extends React.Component {
                                                     }
                                                     {
                                                         post.cardPost && 
-                                                        post.cardPost.map((item) => {
+                                                        post.cardPost.map((item,index) => {
                                                             if(!item.images) {
                                                                 return (
-                                                                    <div className="col-md-4  mt-3">
+                                                                    <div className="col-md-4  mt-3" key={index}>
                                                                         <div className="h-100   layout-border p-3 br10 ">
                                                                             <h5> {item.title} </h5>          
                                                                             <p
@@ -153,12 +153,12 @@ class WebApp extends React.Component {
                                                             }
                                                             else {
                                                                 return(
-                                                                    <div className="col-md-6 mt-3">
+                                                                    <div className="col-md-6 mt-3" key={index}>
                                                                         <div className="h-100 p-3 layout-border br10" >
                                                                             {
-                                                                                item.images.map((image) => {
+                                                                                item.images.map((image,index) => {
                                                                                     return(
-                                                                                        <Img fixed={image.fixed} alt={image.title}  className="mr-1"/>
+                                                                                        <Img fixed={image.fixed} alt={image.title}  className="mr-1" key={index}/>
                                                                                     )
                                                                                 })
                                                                             }

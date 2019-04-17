@@ -24,9 +24,9 @@ class Team extends React.Component{
                       <div className="container">
                           <div className="row">
                                 {
-                                    team.teamAvatar.map((item) => {
+                                    team.teamAvatar.map((item,index) => {
                                         return(
-                                            <Slide bottom>  
+                                            <Slide bottom key={index}>  
                                                 <div className="col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-5">
                                                     <div className="card border-0 text-center py-3">   
                                                         <div className="card-body">
@@ -45,8 +45,6 @@ class Team extends React.Component{
                                 }
                           </div>
                         </div>
-          
-                    
                   </div>   
               </div>
               </Fade>

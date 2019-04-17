@@ -12,7 +12,6 @@ class WhatWeDo extends React.Component {
                     <div className="row">
                         {
                             this.props.service.map((item,index) => {
-                                //   console.log(item.node.icon.file.childImageSharp.fixed);
                                 return(
                                     <Slide bottom key={index}>
                                         <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-5">
@@ -26,7 +25,7 @@ class WhatWeDo extends React.Component {
                                                         <p className="small">{item.tool}</p>
                                                         <p className="card-text">{item.tagline}</p>
                                                         <p className="card-text"><small className="text-muted">
-                                                        <Link to={`/${item.slug}`}>Read more <i className="fas fa-chevron-right ml-1" ></i></Link>
+                                                          <br/>
                                                         </small></p>
                                                     </div>
                                                 </div>
