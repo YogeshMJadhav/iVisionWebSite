@@ -42,9 +42,7 @@ class About extends React.Component {
                                                      />
                                               </div>
                                           </div> 
-          
-          
-                                        <div className="row mt-2">
+                                         <div className="row mt-2">
                                               <div className="col-md-6">
                                                    <div
                                                        dangerouslySetInnerHTML={{
@@ -58,8 +56,8 @@ class About extends React.Component {
                                                        __html: about.ourStrategies.childContentfulRichText.html,
                                                        }}
                                                      />  
+                                               </div>
                                          </div>
-                                        </div>
                                      </div>
                                    </div>
                                 </div>

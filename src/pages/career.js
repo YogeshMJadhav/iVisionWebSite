@@ -1,6 +1,5 @@
 import React from "react"
 import { graphql } from 'gatsby'
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Fade from 'react-reveal/Fade';
@@ -8,7 +7,6 @@ import Fade from 'react-reveal/Fade';
 class Career extends React.Component{
 render() {
     const carrer=this.props.data.contentfulCareer;
-    console.log(carrer);
     return(
         <Layout>
           <SEO title="Career" />
@@ -35,32 +33,32 @@ render() {
                                   </div>
                               </div>
                                   <div className="row mt-2">
-                                  {
-                                      carrer.careerArticleRef.map((item) => {
-                                          return (
-                                            <div className="col-md-6 mb-4">
-                                            <div className=" br-4 p-3  job-article h-100" >
-                                              <h5> {item.title} </h5>
-                                              <p>
-                                                  <em> Experience: {item.experience} </em>
-                                              </p>
-                                              <p>
-                                                  <strong>Skills Required: </strong> <span> {item.skillsRequired}</span>
-                                              </p>
-                                              <div>
-                                                  <strong> Job Description: </strong>
-                                                  <div className="bullet"
-                                                       dangerouslySetInnerHTML={{
-                                                       __html: item.description.childContentfulRichText.html,
-                                                         }}
+                                      {
+                                        carrer.careerArticleRef.map((item) => {
+                                            return (
+                                              <div className="col-md-6 mb-4">
+                                                  <div className=" br-4 p-3  job-article h-100" >
+                                                        <h5> {item.title} </h5>
+                                                        <p>
+                                                            <em> Experience: {item.experience} </em>
+                                                        </p>
+                                                        <p>
+                                                            <strong>Skills Required: </strong> <span> {item.skillsRequired}</span>
+                                                        </p>
+                                                      <div>
+                                                          <strong> Job Description: </strong>
+                                                          <div className="bullet"
+                                                              dangerouslySetInnerHTML={{
+                                                              __html: item.description.childContentfulRichText.html,
+                                                                }}
                                                           />                          
-                                               </div>
-                                             </div>
-                                          </div> 
-                                          )
-                                      })
-                                  }
-                                </div>
+                                                      </div>
+                                                  </div>
+                                              </div> 
+                                            )
+                                        })
+                                      }
+                                 </div>
                               </div>
                            </div>
                         </div>

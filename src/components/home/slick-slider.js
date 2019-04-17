@@ -14,27 +14,29 @@ var settings = {
    
   };
   const slide=['slide-one','slide-two','slide-three']
-const SlickSlider = (props) => (
-    <Slider {...settings}   >
-        {  props.service.filter(data => data.slideTitle)
-                .map((item,index) => {
-                      return (
-                        <div className={`slider ${slide[index]}`}>
-                        <div className="sliderMax">
-                            <h1 className="white">{item.slideTitle}</h1>
-                            <h3 className="mb-4 white">{item.tagline}</h3>
-                            <p className="white mb-5"
-                                    dangerouslySetInnerHTML={{
-                                __html: item.shortBio.childMarkdownRemark.excerpt,
-                                    }}
-                                />
-                            <Link to={`/${item.slug}`}> <button className="btn">Read More</button> </Link> 
-                        </div>
-                    </div>
-                    )
+  const SlickSlider = (props) => (
+        <Slider {...settings}   >
+            {  props.service.filter(data => data.slideTitle)
+                    .map((item,index) => {
+                        return (
+                            <div className="slick-wrapper">
+                                <div className={`slider ${slide[index]}`} key={index}>
+                                    <div className="sliderMax">
+                                        <h1 className="white">{item.slideTitle}</h1>
+                                        <h3 className="mb-4 white">{item.tagline}</h3>
+                                        <p className="white mb-5"
+                                            dangerouslySetInnerHTML={{
+                                            __html: item.shortBio.childMarkdownRemark.excerpt,
+                                                }}
+                                        />
+                                        <Link to={`/${item.slug}`}> <button className="btn">Read More</button> </Link> 
+                                    </div>
+                                </div>
+                            </div>
+                        )
                 })
             }  
-    </Slider>
-)
+        </Slider>
+   )
 
 export default SlickSlider;

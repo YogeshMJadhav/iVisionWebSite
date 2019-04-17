@@ -12,24 +12,20 @@ class IndexPage extends React.Component{
   render() {
     const service = this.props.data.allContentfulAllServices.edges;
     const portfolio = this.props.data.allContentfulPortfolio.edges;
-    console.log(service);
-    
- return (
-  <div>
-  <Layout >
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <Fade>
-    <div className="slick-wrapper">
-    <SlickSlider service={service[0].node.services}/>
-    </div>
-    <WhatWeDo service={service[0].node.services}/>
-    <FeaturedProjects portfolio={portfolio} />
-    <WhatOurCustomerSay/>
-    </Fade>
-  </Layout>
-  </div>
-)
-}
+    return (
+        <div>
+          <Layout >
+              <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+              <Fade>
+                  <SlickSlider service={service[0].node.services}/>
+                  <WhatWeDo service={service[0].node.services} tagline={service[0].node.tagline}/>
+                  <FeaturedProjects portfolio={portfolio} />
+                  <WhatOurCustomerSay/>
+              </Fade>
+          </Layout>
+        </div>
+      )
+  }
 }
 
 export default IndexPage;
@@ -39,7 +35,8 @@ export const pageQuery = graphql`
     allContentfulAllServices{
       edges{
         node{
-          services{
+          tagline
+           services{
             icon{
               fixed(width: 50 ,height:50) {
                 width
