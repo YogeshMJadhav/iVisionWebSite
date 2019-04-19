@@ -2,21 +2,21 @@ const path=require("path")
 const Promise = require('bluebird')
 
 exports.createPages=({graphql,actions}) => {
-    const {createPage} = actions
+    const { createPage } = actions
     return new Promise((resolve ,reject) =>{
         const post=path.resolve('src/templates/service-view.js')
         resolve(
             graphql(`
-            {
-                allContentfulServices{
-                    edges{
-                      node{
-                        slug
-                        id
-                      }
+                {
+                    allContentfulServices {
+                        edges {
+                            node {
+                                slug
+                                id
+                            }
+                        }
                     }
-                  }
-              }
+                }
             `).then((result) =>{
                  if(result.errors) {
                      reject(result.errors)

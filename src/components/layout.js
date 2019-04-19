@@ -4,7 +4,6 @@ import { StaticQuery, graphql } from "gatsby"
 import Header from "./header"
 import "./layout.css"
 import Footer from "../components/footer";
-import { OutboundLink } from 'gatsby-plugin-google-analytics'
 const Layout = ({ children }) => (
     <StaticQuery
         query={graphql`
@@ -42,10 +41,6 @@ const Layout = ({ children }) => (
                       <main>{children}</main>
                     <Footer  siteTitle={data.site.siteMetadata.title} companyOverview={data.contentfulCompanyOverview}/>
                   </div>
-                  <OutboundLink
-                        href="https://www.gatsbyjs.org/packages/gatsby-plugin-google-analytics/"
-                      >
-                  </OutboundLink>
               </>
           )}
      />
