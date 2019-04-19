@@ -29,12 +29,12 @@ var settings = {
                                             __html: item.shortBio.childMarkdownRemark.excerpt,
                                                 }}
                                         />
-                                        <Link to={`/${item.slug}`}> <button className="btn">Read More</button> </Link> 
+                                        <Link to={`/services/${item.slug}`}> <button className="btn">Read More</button> </Link> 
                                     </div>
                                 </div>
                             </div>
                         )
-                })
+                   })
             }  
         </Slider>
    )
