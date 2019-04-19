@@ -11,7 +11,6 @@ var settings = {
     autoplaySpeed:5000,
     slidesToShow: 1,
     slidesToScroll: 1,
-   
   };
   const slide=['slide-one','slide-two','slide-three']
   const SlickSlider = (props) => (
@@ -25,9 +24,9 @@ var settings = {
                                         <h1 className="white">{item.slideTitle}</h1>
                                         <h3 className="mb-4 white">{item.tagline}</h3>
                                         <p className="white mb-5"
-                                            dangerouslySetInnerHTML={{
-                                            __html: item.shortBio.childMarkdownRemark.excerpt,
-                                                }}
+                                              dangerouslySetInnerHTML={{
+                                               __html: item.shortBio.childMarkdownRemark.excerpt,
+                                              }}
                                         />
                                         <Link to={`/services/${item.slug}`}> <button className="btn">Read More</button> </Link> 
                                     </div>
