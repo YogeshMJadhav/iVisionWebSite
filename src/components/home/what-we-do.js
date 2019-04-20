@@ -25,6 +25,7 @@ class WhatWeDo extends React.Component {
                                                         <p className="small">{item.tool}</p>
                                                         <p className="card-text">{item.tagline}</p>
                                                         <p className="card-text"><small className="text-muted">
+                                                        <Link to={`/services/${item.slug}`} >Read More...</Link>
                                                           <br/>
                                                         </small></p>
                                                     </div>
