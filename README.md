@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
-  <a href="https://www.gatsbyjs.org">
+  <a href="https://www.ivisionstudio.in">
     <img alt="Gatsby" src="https://ivisionprismic.netlify.com/static/6d647093f9a26bc0e6f6a76e35f25e9e/cc57e/2498e9edf28bad5e065fdb21e1aaa262c43de0cc_ivision_logo.png" />
   </a>
 </p>
